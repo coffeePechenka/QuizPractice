@@ -1,0 +1,95 @@
+.game{
+    position: relative;
+    padding: 20px;
+    width: 700px;
+    height: 500px;
+    background-color: #38419D;
+    color: #52D3D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 100px;
+        transform: translateY(420px);
+        opacity: 0.8;
+        border-radius: 15px;
+        background-color: #38419D;
+        z-index: -2;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 650px;
+        height: 100px;
+        transform: translateY(400px);
+        opacity: 0.9;
+        border-radius: 15px;
+        background-color: #38419D;
+        z-index: -1;
+    }
+
+    .progress_bar{
+        width: 90%; /* Ширина контейнера */
+        height: 10px; /* Высота прогресс-линии */
+        background-color: #52D3D8; /* Цвет фона контейнера */
+        border-radius: 15px; /* Скругление углов контейнера */
+        overflow: hidden; /* Скрываем переполнение */
+
+        .progress_line{
+            height: 100%;
+            background-color: #200E3A;
+            border-radius: 15px;
+            transition: .4s all;
+        }
+    }
+
+    .content_bar{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .game_question{
+            height: 10%;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .answer_bar{
+            width: 100%;
+            height: 80%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            font-size: 22px;
+            font-weight: 600;
+
+            .question{
+                cursor: pointer;
+                width: 100%;
+                border: 2px solid #52D3D8;
+                padding: 20px;
+                border-radius: 15px;
+                font-weight: 400;
+                transition: .3s all;
+
+                &:hover{
+                    background-color: #3887BE;
+                    color: #200E3A;
+                    border: 2px solid #200E3A;
+                }
+            }
+        }
+    }
+}
